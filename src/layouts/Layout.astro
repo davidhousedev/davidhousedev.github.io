@@ -55,8 +55,8 @@ const socialImageURL = new URL(
     <!-- Open Graph / Facebook -->
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:url" content={canonicalURL} />
-    <meta property="og:image" content={socialImageURL} />
+    <meta name="url" property="og:url" content={canonicalURL} />
+    <meta name="image" property="og:image" content={socialImageURL} />
 
     <!-- Article Published/Modified time -->
     {
