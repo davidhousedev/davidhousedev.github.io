@@ -10,7 +10,6 @@ import { SITE } from "./src/config";
 // https://astro.build/config
 export default defineConfig({
   site: SITE.website,
-  base: "/blog-web",
   integrations: [
     tailwind({
       applyBaseStyles: false,
