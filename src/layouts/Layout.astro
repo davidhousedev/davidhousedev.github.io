@@ -39,6 +39,13 @@ const socialImageURL = new URL(
   class={`${scrollSmooth && "scroll-smooth"}`}
 >
   <head>
+    <!-- keep Linkedin meta tags at the top -->
+    <meta name="title" content={title} />
+    <meta property="og:title" content={title} />
+    <meta name="author" content={author} />
+    <meta name="image" property="og:image" content={socialImageURL} />
+    <meta property="og:description" content={description} />
+    <meta name="url" property="og:url" content={canonicalURL} />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -47,16 +54,10 @@ const socialImageURL = new URL(
 
     <!-- General Meta Tags -->
     <title>{title}</title>
-    <meta name="title" content={title} />
     <meta name="description" content={description} />
-    <meta name="author" content={author} />
     <link rel="sitemap" href="/sitemap-index.xml" />
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta name="url" property="og:url" content={canonicalURL} />
-    <meta name="image" property="og:image" content={socialImageURL} />
 
     <!-- Article Published/Modified time -->
     {
