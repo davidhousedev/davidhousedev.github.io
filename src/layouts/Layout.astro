@@ -39,11 +39,10 @@ const socialImageURL = new URL(
   class={`${scrollSmooth && "scroll-smooth"}`}
 >
   <head>
-    <!-- keep Linkedin meta tags at the top -->
+    <meta name="image" property="og:image" content={socialImageURL} />
     <meta name="title" content={title} />
     <meta property="og:title" content={title} />
     <meta name="author" content={author} />
-    <meta name="image" property="og:image" content={socialImageURL} />
     <meta property="og:description" content={description} />
     <meta name="url" property="og:url" content={canonicalURL} />
     <meta charset="UTF-8" />
@@ -52,14 +51,10 @@ const socialImageURL = new URL(
     <link rel="canonical" href={canonicalURL} />
     <meta name="generator" content={Astro.generator} />
 
-    <!-- General Meta Tags -->
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="sitemap" href="/sitemap-index.xml" />
 
-    <!-- Open Graph / Facebook -->
-
-    <!-- Article Published/Modified time -->
     {
       pubDatetime && (
         <meta
@@ -77,14 +72,12 @@ const socialImageURL = new URL(
       )
     }
 
-    <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content={canonicalURL} />
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={socialImageURL} />
 
-    <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
