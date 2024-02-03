@@ -15,6 +15,7 @@ export default function Emphasis(props: EmphasisProps) {
         (Array.isArray(props.content) ? (
           props.content.map((p, i) => (
             <p
+              // @ts-ignore narrowing doesn't affect closures until the next TS version
               className={i === props?.content?.length - 1 ? "mb-0" : ""}
               key={i}
             >
